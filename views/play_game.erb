@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <h1>Let's play!</h1>
+
+    <section>
+      <h3>You Picked:</h3>
+      <img src="/<%= @player_pic %>"/>
+    </section>
+
+    <section>
+      <h3>Computer Picked:</h3>
+      <img src="/<%= @computer_pic %>"/>
+    </section>
+
+    <h1>
+    <% if @outcome == :win %>
+      You Win!
+    <% elsif @outcome == :lose %>
+      You Lose...
+    <% else %>
+      It's a tie!
+    <% end %>
+    </h1>
+    <a href="/">Play Again!</a>
+
+  </body>
+</html>
