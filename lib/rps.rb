@@ -1,17 +1,15 @@
 class RPS
 
   def self.play(my_shape)
-    puts "You picked #{shape_to_string(my_shape)}"
     computer_shape = self.pick_shape
-    puts "Computer picked #{shape_to_string(computer_shape)}"
     if my_shape == computer_shape
-      puts "We tied!"
+      return computer_shape, :draw
     else
       winner = self.pick_winner(my_shape, computer_shape)
       if winner == :you
-        puts "You Win!!"
+        return computer_shape, :win
       else
-        puts "Computer Wins!!"
+         return computer_shape, :lose
       end
     end
   end
