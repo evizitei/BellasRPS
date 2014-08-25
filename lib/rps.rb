@@ -34,13 +34,4 @@ class RPS
     end
   end
 
-  SHAPE_MAP ={
-    R: "Rock",
-    P: "Paper",
-    S: "Scissors"
-  }
-
-  def self.shape_to_string(shape)
-    SHAPE_MAP[shape]
-  end
 end
